@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article class="post">
+  <div class="post-content">
+    <h3> {{ site.course }} Announcements </h3>
+    <div style = "border:solid 1px; overflow-y: scroll; height: 250px">
+    {{ content }}
+   </div>
+
+<p><p style = 'color:darkred'>
+Last updated: {{ site.time | date: '%m-%d-%y at %H:%M:%S' }}
+<p><p>
+
+  </div>
+
+</article>

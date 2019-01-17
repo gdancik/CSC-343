@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="post">
+
+<div class="post-content">
+ {% if page.full_title %}
+    <h3>{{site.course}} {{ page.full_title }}</h3>
+ {% else %}
+    <h3>{{site.course}} {{ page.title }}</h3>
+ {% endif %}
+    {{ content }}
+  </div>
+
+</article>
