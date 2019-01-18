@@ -14,5 +14,3 @@ baseurl: "/CSC-343"
 markdown: kramdown
 timezone: America/New_York
 course: CSC-343 
-
-theme: jekyll-theme-cayman
