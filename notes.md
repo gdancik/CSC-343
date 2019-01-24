@@ -7,8 +7,8 @@ exclude_from_nav: false
 ---
 
 * [Course Introduction (with Docker examples)]({{ site.baseurl }}/data/notes/Intro.pdf)
-{% comment %}
 * [Linux Tutorial]({{ site.baseurl }}/data/notes/linuxtut/)
+{% comment %}
 * [Inheritance]({{ site.baseurl }}/data/notes/Inheritance.pdf)
 * [Cells and DNA]({{ site.baseurl }}/data/notes/Cells_and_DNA.pdf)
 * [Python Programming Basics]({{ site.baseurl }}/data/notes/PythonBasics.zip)

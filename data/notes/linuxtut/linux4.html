@@ -24,7 +24,7 @@ file <i> list1</i> to <i>alist</i> and <i>list2</i>to<i>list2.txt</i>. You shoul
 <p> Try typing </p>
 <p class="command"> # ls *list</p>
 <p>This will list all files in the current directory ending with <i>list</i>. However, the filename expansion will not include hidden files beginning with a dot, such as .bash_profile. In order to list all hidden files, you can use </p>
-<p class = "command"> ls -d .* </p>
+<p class = "command"> # ls -d .* </p>
 <p> In the above, the -d option specifies that we do not want to recursively search directories for matching files. </p>
 <p>The character ? will match exactly one character.<br />
   So<samp> ls ?ouse </samp>will match files like <i>house</i> and <i>mouse</i>, 
@@ -32,14 +32,14 @@ file <i> list1</i> to <i>alist</i> and <i>list2</i>to<i>list2.txt</i>. You shoul
   Try typing </p>
 <p class="command"> # ls ?list</p>
 <p> When globbing is used, the filename is expanded and the command executed using this expansion, which may contain multiple files. To see the expansion itself, you can type</p>
-<p class = "command">echo list*</p>
+<p class = "command"># echo list*</p>
 <p> Suppose that this returns <i>list1 list2</i>. Then the command <samp> ls list*</samp> executes the command <samp>ls list1 list2</samp>. Similarly, the command <samp>grep</samp> can be used to search multiple files. For example, to search all (non-hidden) files in a directory for the word Linux, type
-<p class = "command">grep Linux * </p>     
+<p class = "command"># grep Linux * </p>     
 <h3> Matching a range of characters </h3>
 <p> Square brackets are used to indicate that a match to one of the specified characters is desired. For example,try typing</p>
-<p class = "command"> ls -d [al]* </p>
+<p class = "command"> # ls -d [al]* </p>
 <p> This will list all files in the current directory begining with either an 'a' or an 'l'.</p> <p>Within brackets, a hyphen can be used to denote a range. For example, to list all files beginning with any letter between (and including) a to k, you can type</p>
-<p class = "command"> ls -d [a-k]* </p> 
+<p class = "# command"> ls -d [a-k]* </p> 
 <h3> Exercise 4a </h3>
 <p> Write commands for the following:
 <ol>
@@ -51,9 +51,9 @@ file <i> list1</i> to <i>alist</i> and <i>list2</i>to<i>list2.txt</i>. You shoul
 <h3> Globbing vs. Regular Expressions </h3>  
 <p>  
 Be aware that there is a related 'pattern matching' grammar known as regular expressions (regex), which are used by utilities such as <samp>grep</samp> and in scripting languages such as python. There are important differences between globbing and regular expressions. For example, the character * in a regular expression means "zero or more of the <i>preceeding</i> character". For example, the command
-<p class = "command"> ls h*t </p>
+<p class = "command"> # ls h*t </p>
 <p> will list all files that start with h and end in t, such as hat, hot, halt, and hoist. However, the command</p> 
-<p class = "command"> grep h*t file.txt </p> 
+<p class = "command"> # grep h*t file.txt </p> 
 <p>will match any lines containing one or more 'h's followed by a t, such as ht, ahht, ZZZhhhhht123, etc. For more on reglar expressions, click <a href = "http://ryanstutorials.net/linuxtutorial/cheatsheetgrep.php">here</a> for a grep cheat sheet. </p>
 
 <h2>4.2 Filename conventions </h2>
@@ -156,7 +156,7 @@ options etc. Note that in our docker container, we need to run the command <samp
   </tr>
 </table>
 <p>&nbsp;</p>
-<p class="navbar"><a href="unix3.html"><img src="media/left.gif" alt="Previous" width="37" height="39" border="0" /></a> 
+<p class="navbar"><a href="linux3.html"><img src="media/left.gif" alt="Previous" width="37" height="39" border="0" /></a> 
   <a href="index.html"><img src="media/home.gif" alt="Home" width="81" height="39" border="0" /></a> 
 </p>
 

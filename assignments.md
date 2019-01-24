@@ -9,8 +9,8 @@ exclude_from_nav: false
 Note: all Assignments are due at the beginning of class unless noted otherwise
 
 * [Docker Installation and Practice]({{ site.baseurl }}/data/hw/DockerSetup.pdf) (required for Lab #1)  
-{% comment %}
 * [Lab #1: Navigating Linux]({{ site.baseurl }}/data/hw/Linux.pdf) (Due: Wednesday, 1/30/2019) 
+{% comment %}
 * Watch the You Tube videos covering genes, SNPs, and where your genes come from linked at the end of the <a href = "../notes/">Course Introduction</a> notes
 * [Lab #2 - DNA and complements]({{ site.baseurl }}/data/hw/Lab2_Complements.pdf) (Due: Wednesday, 2/7) 
 * [Lab #3 - Pathogen Identification (Python Lab)]({{ site.baseurl }}/data/hw/lab3.zip) (Due: Wednesday, 2/21) 
