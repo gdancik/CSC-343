@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<title> UNIX Tutorial Six</title> 
+<link href="unixtut1.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="Copyright" content="Michael Stonebank, 1995; Garrett Dancik, 2015" />
+</head> 
+ 
+<body>
+<h1>UNIX Tutorial Six </h1>
+<h2>Other useful UNIX commands &nbsp; </h2>
+<h3>find</h3>
+<p>The find command lets you find a file matching the specified pattern. For example, to find all files starting with shakespeare in your home directory (/home/training) or one of its subdirectories, type </p>
+<p class = "command">find /home/training -name "shakespeare*"</p>
+<p>Suppose you wanted to search for all files beginning with shakespeare on the system (the top most directory of the system is /). In general, you will get many 'Permission denied' errors because you will not have read access to list files in all directories. This is a good example of where sudo comes in handy. Type</p>
+<p class = "command"> sudo find / -name "shakespeare*"</p>
+<p>Compare this to running the command without sudo</p>
+
+<h3> Exercise 6 </h3>
+<p> 
+<ol>
+<li>From your home directory use the find command to display all files containing the word list (i.e., 'list' can be in the beginning, end, or middle of the file name).</li>
+<li> Using the find command and an appropriate pipe, display the number of files containing the word list.
+</li>  
+</ol>
+</p>
+<h3>df</h3>
+<p>The df command reports on the space left on the file system (df = disk space free). For example, to 
+  find out how much space is left on your system, type </p>
+
+<p class="command"> $ df -h . </p>
+<p> The -h flag specifies that file sizes are output in a human readable format </p>
+
+<h3>du</h3>
+<p>The du command outputs the number of kilobyes used by each subdirectory in a directory which is useful if memory management is an issue (du = disk usage). To see memory usage of your home directory, Type </p>
+<p class="command"> $ du -h /home/training/ </p>
+<p> Useful options include <samp>-a</samp> for including memory usage of files in addition to subdirectories, and <samp>-s</samp> for displaying total memory usage for the specified file or directory only. 
+
+<h3>File compression using gzip </h3>
+<p> Compression reduces the size of a file or set of files. First find the size of the file poems.txt using the <samp>ls -l</samp> command.  
+To zip the file poems.txt, type </p>
+<p class="command"> $ gzip poems.txt </p>
+<p>This will zip the file and place it in a file called poems.txt.gz. What is the size of the zipped file?</p>
+<p> To unzip the file, use the gunzip command. </p>
+
+<p class="command"> $ gunzip poems.txt.gz </p>
+<p> Unzipping a file named file.txt.gz will create a new file named file.txt. Therefore, this <samp>unzip</samp> command will overwrite the file poems.txt. 
+
+<h3> File archives </h3>
+<p>An <i>archive</i> is a collection of files that behaves like a single file for for easy manipulation (e.g., copying). An archive can be created using the <samp>tar</samp> command. To create an archive named file.tar, the tar command has the format <samp> tar -cvf file.tar file1 file2 ...</samp>. For example, to create an archive of all files in the unixstuff directory, type</p>
+ <p class = "command"> tar -cvf unix.tar /home/training/unixstuff/*</p>    
+<p> To list the files archived in unix.tar, type</p>
+<p class = "command"> tar -tvf unix.tar</p>
+<p> Extracting the files from the archive will maintain the directory structure by which the files were archived. In this example, extracted files will be placed in the unixstuff directory, which will be created in the current directory (or written to). To see this, create a directory called tmp and copy the unix.tar file to it. Then change to the tmp directory and extract the files using </p>
+<p class = "command"> tar -xvf unix.tar</p> 
+<p>Using the <samp>ls</samp> and <samp>cd</samp> commands, observe the extracted files.</p>
+<p> An archive does not compress the files it stores, but you may apply gzip to an archive (.tar) file. Alternately, you can use the -z option to create a compressed version of the archive. For example, type</p>
+<p class = "command"> tar -cvzf unix.tar.gz /home/training/unixstuff</p>      
+<p>Compare the sizes of unix.tar with unix.tar.gz.
+<h3>file</h3>
+<p>file classifies the named files according to the type of data they contain, 
+  for example ascii (text), pictures, compressed data, etc. To report on all 
+  files in the current directory, type </p>
+
+<p class="command"> $ file * </p>
+
+<h3>history</h3>
+<p>The shell keeps an ordered list of all the commands that you have entered. 
+  Each command is given a number according to the order it was entered.</p>
+
+<p class="command"> $ history (show command history list)</p>
+<p>If you are using the C shell, you can use the exclamation character (!) to 
+  recall commands easily.</p>
+
+<p class="command">$ !! (recall last command)</p>
+<p class="command">$ !-3 (recall third most recent command) </p>
+<p class="command">$ !5 (recall 5th command in list) </p>
+<p class="command">$ !grep (recall last command starting with grep) </p>
+<p>You can increase the size of the history buffer by typing</p>
+
+<p class="command">$ set history=100 </p>
+    <p> </p>
+
+<h2>Summary </h2>
+<table border="1" align="center" cellpadding="3" cellspacing="0">
+  <tr> 
+    <td><code>find dir -name pattern</code></td>
+    <td>Starting from the directory dir, find files that match pattern</td>
+  </tr>
+  <tr> 
+    <td><code> df <var>file</var></code></td>
+    <td> List the space left on the system that contains file</td>
+  </tr>
+  <tr> 
+    <td><code> du <var>file1 file2 ...</var></code></td>
+    <td> List the size of the specified files or directories</td>
+  </tr>
+  <tr>
+    <td><code> gzip <var>file</var></code></td>
+    <td> Creates a compressed version of the specified file, named file.gz</td>
+  </tr>
+  <tr>
+    <td><code> tar -cvf <var>file.tar file ...</var></code></td>
+    <td> Creates an archvive of the specified files named file.tar</td>
+  </tr>
+  <tr>
+    <td><code> tar -xvf <var>file.tar</var></code></td>
+    <td> Extracts files from an archive</td>
+  </tr>
+  <tr>
+    <td><code> file <var>file1 file2 ...</var></code></td>
+    <td>determines the file type of the specified files</td>
+  </tr>
+  <tr>
+    <td><code> history</code></td>
+    <td>lists the recent history of the shell</td>
+  </tr>
+</table> 
+
+<p class="navbar"><a href="unix5.html"><img src="media/left.gif" alt="Previous" width="37" height="39" border="0" /></a> 
+  <a href="index.html"><img src="media/home.gif" alt="Home" width="81" height="39" border="0" /></a> 
+</p>
+
+
+<p class="date"> Last Modified: August 2015 </p>
+
+
+</body>
+</html>

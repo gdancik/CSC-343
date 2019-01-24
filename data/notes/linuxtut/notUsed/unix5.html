@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<title> UNIX Tutorial Five</title> 
+<link href="unixtut1.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="Copyright" content="Michael Stonebank, 1995; Garrett Dancik, 2015" />
+</head> 
+ 
+<body>
+<h1>UNIX Tutorial Five </h1>
+<h2>5.1 File system security (access rights) </h2>
+<p> Let's look at the output of the <samp>ls -l</samp> command in more detail (the <samp>l</samp> option is for long listing).
+<p>In your unixstuff directory, type </p>
+<p class="command"> $ ls -l list1 </p>
+<p>You will see that you now get lots of details about the listed file or files, 
+  similar to the example below. </p>
+
+<p> <img src = "permissions.jpg" alt = "file permissions"> </p>
+<p>Each file (and directory) has associated access rights, which may be found 
+  by typing <samp>ls -l</samp>.</p> 
+
+<p>On the left-hand side is a 10 symbol string that will begin with a 'd' to indicate a directory, or will begin with a '-' otherwise.</p> 
+
+<p>The 9 remaining symbols indicate the permissions, or access rights, of read (r), write (w) or execute (x) and are 
+  taken as three groups of 3. </p>
+<ul>
+  <li> The left group of 3 gives the file permissions for the user that owns the 
+    file (or directory) (training in the above example); <br />
+  </li>
+  <li> the middle group gives the permissions for the group of people to whom 
+    the file (or directory) belongs (cloudera in the above example);<br />
+  </li>
+  <li> the rightmost group gives the permissions for all others.</li>
+</ul>
+
+<p>The symbols r, w, etc., have slightly different meanings depending on whether 
+  they refer to a simple file or to a directory. </p>
+<h3>Access rights on files.</h3>
+<ul>
+  <li> r (or -), indicates read permission (or otherwise), that is, the presence 
+    or absence of permission to read and copy the file <br />
+  </li>
+  <li> w (or -), indicates write permission (or otherwise), that is, the permission 
+    (or otherwise) to change a file <br />
+  </li>
+  <li> x (or -), indicates execution permission (or otherwise), that is, the permission 
+    to execute a file, where appropriate </li>
+</ul>
+<h3>Access rights on directories.</h3>
+<ul>
+  <li> r allows users to list files in the directory; </li>
+  <li> w means that users may delete files from the directory or move files into 
+    it; </li>
+  <li> x means the right to access files in the directory. This implies that you 
+    may read files in the directory provided you have read permission on the individual 
+    files. </li>
+</ul>
+<p>So, in order to read a file, you must have execute permission on the directory 
+  containing that file, and hence on any directory containing that directory as 
+  a subdirectory, and so on, up the tree. </p>
+<h3>Some examples</h3>
+
+<table border="1" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td><samp>-rwxrwxrwx</samp></td>
+    <td>a file that everyone can read, write to (modify/delete) and execute .</td>
+  </tr>
+  <tr>
+    <td><samp>-rw-------</samp></td>
+    <td>a file that only the owner can read and write - no-one else <br />
+      can read or write and no-one has execution rights (e.g. your <br />
+      mailbox file).</td>
+  </tr>
+</table>
+
+
+<h2>5.2 Changing access rights</h2>
+<h3>chmod (changing a file mode)</h3>
+<p>Only the owner of a file can use <samp>chmod</samp> to change the permissions 
+  of a file. The options of <samp>chmod</samp> are as follows </p>
+<table border="1" align="center" cellpadding="3" cellspacing="0">
+  <tr> 
+    <th>Symbol</th>
+    <th>Meaning</th>
+  </tr>
+  <tr> 
+    <td><div align="center">u</div></td>
+    <td>user who owns the file (the owner)</td>
+  </tr>
+  <tr> 
+    <td><div align="center">g</div></td>
+    <td>group</td>
+  </tr>
+  <tr> 
+    <td><div align="center">o</div></td>
+    <td>other</td>
+  </tr>
+  <tr> 
+    <td><div align="center">a</div></td>
+    <td>all</td>
+  </tr>
+  <tr> 
+    <td><div align="center">+</div></td>
+    <td>add permission</td>
+  </tr>
+  <tr> 
+    <td><div align="center">-</div></td>
+    <td>take away permission</td>
+  </tr>
+  <tr> 
+    <td><div align="center">r</div></td>
+    <td>read</td>
+  </tr>
+  <tr> 
+    <td><div align="center">w</div></td>
+    <td>write (and delete)</td>
+  </tr>
+  <tr> 
+    <td><div align="center">x</div></td>
+    <td>execute (and access directory) </td>
+  </tr>
+
+
+</table>
+<p> For example, to remove read write permissions on the file <strong>biglist</strong> 
+  for the group and others, type </p>
+
+<p class="command"> $ chmod go-r list1</p>
+<p>This will leave the other (owner) permissions unaffected. Then type <samp> ls -l list1</samp> to view the changes.</p>
+<p>To give read and write permissions on the file <strong>list1</strong> to 
+  all, </p>
+<p class="command"> $ chmod a+rw list1 </p>
+<h3>Exercise 5</h3>
+<p>Change the access permissions on the directory <strong>backups</strong> so that only the owner has read, write, and execute permission, and no permissions are granted to anyone else.  
+<p> Use <samp>ls -l</samp> to check that the permissions have changed. </p>
+
+<h2>5.3 Executing a command as a superuser </h2>
+<p>The command <samp>sudo</samp>, which stands for <i>superuser do</i>, allows you to execute a command as a <i>superuser</i>, which is the system administrator or 'root' user that has complete control over the system. A user can only use <samp>sudo</samp> if authorized to do so; you may do so on your virtual machine. If prompted for password, this is the same as your login password. For security reasons, all uses or attempted uses of <samp>sudo</samp> are recorded in a log file. </p>
+<p> To demonstrate <samp>sudo</samp> we will first remove read and write permissions from the file list1 by typing: </p>
+<p class = "command">chmod a-rw list1</p>
+<p> First, confirm the new permissions using the <samp>ls -l</samp> command. Then try to view the contents of list1, using the cat command, and note that you get a 'Permission denied' error.<p>
+<p> However, because <i>root</i> has read, write, and executable permissions for all files, we can use <samp>sudo</samp> to display the contents:</p>
+<p class = "command"> sudo cat list1</p>
+<p> Now change the permissions for list1 so that the owner has read and write access. </p> 
+
+<h2>5.4 Processes and Jobs  </h2>
+<p>A process is an executing program identified by a unique PID (process identifier). 
+  To see information about your processes, with their associated PID and status, 
+  type </p>
+
+<p class="command"> $ ps </p>
+<p>A process may be in the foreground, in the background, or be suspended. In 
+  general the shell does not return the UNIX prompt until the current process 
+  has finished executing. </p>
+<p> Some processes take a long time to run and hold up the terminal. Backgrounding 
+  a long process has the effect that the UNIX prompt is returned immediately, 
+  and other tasks can be carried out while the original process continues executing. 
+</p>
+<h3>Running background processes</h3>
+<p>To background a process, type an <strong>&amp;</strong> at the end of the command 
+  line. For example, the command <samp>sleep</samp> waits a given number of seconds 
+  before continuing. Type </p>
+<p class="command"> $ sleep 10 </p>
+<p>The shell will wait 10 seconds before returning the command prompt $. Until the 
+  command prompt is returned, you can do nothing except wait. </p>
+<p> To run <samp>sleep</samp> in the background, type </p>
+<p class="command"> $ sleep 10 &amp;</p>
+<p class="stdout">[1] 6259 </p>
+<p>The <strong>&amp;</strong> runs the job in the background and returns the prompt 
+  straight away, allowing you do run other programs while waiting for that one 
+  to finish. </p>
+<p>The first line in the above example is typed in by the user; the next line, 
+  indicating job number and PID, is returned by the machine. The user is notified 
+  of a job number (numbered from 1) enclosed in square brackets, together with 
+  a PID and is notified when a background process is finished. Backgrounding is 
+  useful for jobs which will take a long time to complete. </p>
+<h3>Backgrounding a current foreground process</h3>
+<p>At the prompt, type </p>
+<p class="command"> $ sleep 100 </p>
+<p>You can suspend the process running in the foreground by holding down the <code>[control]</code> 
+  key and typing <code>[z]</code> (written as <strong>^Z</strong>) Then to put 
+  it in the background, type </p>
+<p class="command"> $ bg </p>
+
+<h2>5.5 Listing suspended and background processes </h2>
+<p>When a process is running, backgrounded or suspended, it will be entered onto 
+  a list along with a job number. To examine this list, type </p>
+<p class="command"> $ jobs </p>
+<p>An example of a job list could be </p>
+<p class="stdout"> [1]+  Stopped less poems.txt <br />
+		   [2]- Running sleep 100 &
+</p>
+<p>To restart (foreground) a suspended (stopped) processes, type </p>
+<p class="command"> $ fg %jobnumber </p>
+<p>For example, to restart <samp>less poems.txt</samp>, type </p>
+<p class="command"> $ fg %1 </p>
+<p>Typing <samp>fg</samp> with no job number foregrounds the last suspended process. 
+</p>
+  <p> </p>
+<h2>5.7 Killing a process </h2>
+<h3>kill (terminate or signal a process)</h3>
+<p>It is sometimes necessary to kill a process (for example, when an executing 
+  program is in an infinite loop). </p>
+<p> To kill a job running in the foreground, type <samp>^C</samp> (control c). 
+  For example, run </p>
+<p class="command">$ sleep 100<br />
+  ^C </p>
+<p> To kill a suspended or background process, type </p>
+<p class="command"> $ kill %jobnumber </p>
+<p>For example, run </p>
+<p class="command">$ sleep 100 &amp;<br />
+  $ jobs</p>
+<p> If it is job number 4, type </p>
+<p class="command"> $ kill %4 </p>
+<p>To check whether this has worked, examine the job list again to see if the 
+  process has been removed. </p>
+<h3>ps (process status)</h3>
+<p> Alternatively, processes can be killed by finding their process numbers (PIDs) 
+  and using <samp>kill <var>PID_number</var></samp></p>
+<p class="command"> $ sleep 100 &amp;<br />
+  $ ps</p>
+<p class="stdout">PID TTY TIME CMD<br />
+  20077 pts/0 0:00 bash<br />
+  21563 pts/0 0:00 less<br />
+  21563 pts/0 0:00 sleep<br />
+<p>To kill off the process <samp>sleep</samp>, type </p>
+<p class="command"> $ kill 21563 </p>
+<p>and then type <samp>ps</samp> again to see if it has been removed from the 
+  list. </p>
+<p> If a process refuses to be killed, you may use the <strong>-9</strong> option, i.e. 
+  type </p>
+<p class="command"> $ kill -9 20077 </p>
+<p class="hint">Note: It is not possible to kill off other users' processes !!!</p>
+<h2>Summary </h2>
+<table border="1" align="center" cellpadding="3" cellspacing="0">
+  <tr> 
+    <td><code>ls -l</code></td>
+    <td>list access rights for files</td>
+  </tr>
+  <tr> 
+    <td><code>chmod [<var>options</var>] <var>file</var></code></td>
+    <td> change access rights for named file</td>
+  </tr>
+  <tr>
+    <td><code>sudo <var>command</var></code></td>
+    <td>Run a command as the superuser</td>
+  </tr>
+  <tr> 
+    <td><code><var>command</var> &amp;</code></td>
+    <td>run command in background</td>
+  </tr>
+  <tr> 
+    <td><code>^C</code></td>
+    <td>kill the job running in the foreground</td>
+  </tr>
+  <tr> 
+    <td><code>^Z</code></td>
+    <td>suspend the job running in the foreground</td>
+  </tr>
+  <tr> 
+    <td><code>bg</code></td>
+    <td>background the suspended job</td>
+  </tr>
+  <tr> 
+    <td><code>jobs</code></td>
+    <td>list current jobs</td>
+  </tr>
+  <tr> 
+    <td><code>fg %1</code></td>
+    <td>foreground job number 1</td>
+  </tr>
+  <tr> 
+    <td><code>kill %1</code></td>
+    <td> kill job number 1</td>
+  </tr>
+  <tr> 
+    <td><code>ps</code></td>
+    <td>list current processes</td>
+  </tr>
+  <tr> 
+    <td><code>kill 26152</code></td>
+    <td>kill process number 26152</td>
+  </tr>
+</table>
+  
+
+<p>&nbsp;</p><p class="navbar"><a href="unix4.html"><img src="media/left.gif" alt="Previous" width="37" height="39" border="0" /></a> 
+  <a href="index.html"><img src="media/home.gif" alt="Home" width="81" height="39" border="0" /></a><a href="unix6.html"><img src="media/right.gif" alt="Next" width="37" height="39" border="0" /></a> 
+</p>
+
+<p class="date"> Last Modified: August 2015 </p>
+
+</body>
+</html>

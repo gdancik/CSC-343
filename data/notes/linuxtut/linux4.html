@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> LINUX Tutorial Four </title>
+<link href="unixtut1.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="Copyright" content="Michael Stonebank, 1995; Garrett Dancik, 2015" />
+</head>
+<body>
+<h1>LINUX Tutorial Four </h1>
+<h2>4.1 Wildcards and globbing</h2>
+<h3>The characters * and ?</h3>
+<p> Before beginning this section, <i>cd</i> to your <i>linuxstuff</i> directory (if not already there) and copy the 
+file <i> list1</i> to <i>alist</i> and <i>list2</i>to<i>list2.txt</i>. You should now have the files <i>alist</i>,<i>list1</i>, 
+<i>list2</i>,<i>list2.txt</i>.
+<p> LINUX shells will carry out <i>filename expansion</i>, based on wildcard characters, in a process known as <i>globbing</i>.  
+<p>The character * is called a wildcard, and will match against none or more character(s) of any type 
+  in a file (or directory) name. For example, in your <strong>linuxstuff</strong> 
+  directory, type </p>
+<p class="command"> # ls list*</p>
+<p>This will list all files in the current directory starting with <i>list</i>. 
+</p>
+<p> Try typing </p>
+<p class="command"> # ls *list</p>
+<p>This will list all files in the current directory ending with <i>list</i>. However, the filename expansion will not include hidden files beginning with a dot, such as .bash_profile. In order to list all hidden files, you can use </p>
+<p class = "command"> ls -d .* </p>
+<p> In the above, the -d option specifies that we do not want to recursively search directories for matching files. </p>
+<p>The character ? will match exactly one character.<br />
+  So<samp> ls ?ouse </samp>will match files like <i>house</i> and <i>mouse</i>, 
+  but not <i>grouse</i>. <br />
+  Try typing </p>
+<p class="command"> # ls ?list</p>
+<p> When globbing is used, the filename is expanded and the command executed using this expansion, which may contain multiple files. To see the expansion itself, you can type</p>
+<p class = "command">echo list*</p>
+<p> Suppose that this returns <i>list1 list2</i>. Then the command <samp> ls list*</samp> executes the command <samp>ls list1 list2</samp>. Similarly, the command <samp>grep</samp> can be used to search multiple files. For example, to search all (non-hidden) files in a directory for the word Linux, type
+<p class = "command">grep Linux * </p>     
+<h3> Matching a range of characters </h3>
+<p> Square brackets are used to indicate that a match to one of the specified characters is desired. For example,try typing</p>
+<p class = "command"> ls -d [al]* </p>
+<p> This will list all files in the current directory begining with either an 'a' or an 'l'.</p> <p>Within brackets, a hyphen can be used to denote a range. For example, to list all files beginning with any letter between (and including) a to k, you can type</p>
+<p class = "command"> ls -d [a-k]* </p> 
+<h3> Exercise 4a </h3>
+<p> Write commands for the following:
+<ol>
+<li> list all files that end in .txt </li>
+<li> list all files that end in a number (i.e., any digit between 0 and 9) </li>
+<li> list all files that contain a number </li>  
+</ol>   
+
+<h3> Globbing vs. Regular Expressions </h3>  
+<p>  
+Be aware that there is a related 'pattern matching' grammar known as regular expressions (regex), which are used by utilities such as <samp>grep</samp> and in scripting languages such as python. There are important differences between globbing and regular expressions. For example, the character * in a regular expression means "zero or more of the <i>preceeding</i> character". For example, the command
+<p class = "command"> ls h*t </p>
+<p> will list all files that start with h and end in t, such as hat, hot, halt, and hoist. However, the command</p> 
+<p class = "command"> grep h*t file.txt </p> 
+<p>will match any lines containing one or more 'h's followed by a t, such as ht, ahht, ZZZhhhhht123, etc. For more on reglar expressions, click <a href = "http://ryanstutorials.net/linuxtutorial/cheatsheetgrep.php">here</a> for a grep cheat sheet. </p>
+
+<h2>4.2 Filename conventions </h2>
+<p>We should note here that a directory is merely a special type of file. So the 
+  rules and conventions for naming files apply also to directories. </p>
+<p> In naming files, characters with special meanings such as <strong>/ & &amp; 
+  #</strong> , should be avoided. Also, avoid using spaces within names. The safest 
+  way to name a file is to use only alphanumeric characters, that is, letters 
+  and numbers, together with _ (underscore) and . (dot). </p>
+<p> File names conventionally start with a lower-case letter, and may end with 
+  a dot followed by a group of letters indicating the contents of the file. For 
+  example, all files consisting of python code may be named with the ending .py, for 
+  example, prog1.py . Then in order to list all files containing python code in your 
+  home directory, you need only type <samp>ls *.py</samp> in that directory. </p>
+<h3>Exercise 4b </h3>
+<p>What command can you use to search all python code files (ending in .py) and printing the line and line number for each line containing the word <i>sum</i>? </p>
+
+<h2>4.3 Getting Help</h2>
+<h3>On-line Manuals</h3>
+<p>There are on-line manuals which gives information about most commands. These built-in 
+  manual pages tell you which options a particular command can take, and how each 
+  option modifies the behaviour of the command. Type <samp>man command</samp> to read the manual 
+  page for a particular command. </p>
+<p> For example, to find out more about the <samp>wc</samp> (word count) command, 
+  type </p>
+<p class="command"> # man wc </p>
+
+<p> You will get an error! In the docker container we are using, the man command and manual pages are not installed. In order to use the <i>man</i> command we need to do the following:<ol>
+    <li> Modify the yum configuration file /etc/yum.conf by adding a number sign (#) to the beginning of the line 
+        <i>tsflags=nodocs</i>. This change comments out the line which tells the program installer <i>yum</i> not to install manual pages. </li>
+    <li>Run the command <samp>yum install man-pages man-db</samp>. Type <i> y</i> when prompted to continue the installation. </li>
+    <li>Once installed, retype <samp>man wc</samp> to see the man page for the <i>wc</i> command. Note that you
+        will need to type <samp>q</samp> to exit the manual.</li>
+
+</ol>
+
+<p> The correct usage of a command is described under <samp>Synopsis</samp>, where options or arguments in brackets are optional.</p><p>For example, the usage for <samp>wc</samp> is <samp>wc [-clmw] [file ...]</samp>, with optional flags for outputting the number of bytes in each file, number of lines, characters, and words. The ellipses (<samp>...</samp>) indicate that one or more files can be specified. If no files are specified, then standard input is used. For example, to display the number of words and lines in the files <samp>list1</samp> and <samp>list2</samp>, type </p>
+<p class = "command"> # wc -wl list1 list2 </p>          
+<p> An alternate way of getting help is given by the following example, </p>
+<p class="command"> # whatis wc </p>
+<p> which gives a one-line description of the command, but omits any information about 
+options etc. Note that in our docker container, we need to run the command <samp>mandb</samp> before using this command for the first time</p>
+<h3> Exercise 4c </h3>
+<p> Look at the online manual for <samp>ls</samp>, and note that there are many options. However, we can search for keywords in the same way that <i>vi</i> allows searches, e.g., type <samp>/string</samp> to search for a <i>string</i></p>
+<ol>
+<li> Sort the files list1 and list2 by "time modified". </li>
+</ol>   
+<h3>Apropos</h3>
+<p>When you are not sure of the exact name of a command, </p>
+<p class="command"> # apropos keyword </p>
+<p> will give you the commands with keyword in their manual page header. For example, 
+  try typing </p>
+<p class="command"> # apropos copy </p>
+<h2>History</h2>
+<p>The shell keeps an ordered list of all the commands that you have entered. 
+  Each command is given a number according to the order it was entered. The following command prints a numbered list of recent commands:</p>
+
+<p class="command"> # history</p>
+<p>In most shells, incuding bash (the shell we are using), you can use the exclamation character (!) to 
+  recall commands easily.</p>
+
+<p class="command"># !! (recall last command)</p>
+<p class="command"># !-3 (recall third most recent command) </p>
+<p class="command"># !5 (recall the 5th command in list) </p>
+<p class="command"># !grep (recall last command starting with grep) </p>
+<p>You can increase the size of the history buffer by typing</p>
+
+<p class="command"># set history=100 </p>
+    <p> </p>
+
+<h2>Summary </h2>
+<table border="1" align="center" cellpadding="3" cellspacing="0">
+  <tr> 
+    <td><code>*</code></td>
+    <td>match any number of characters</td>
+  </tr>
+  <tr> 
+    <td><code>?</code></td>
+    <td>match one character</td>
+  </tr>
+  <tr>
+    <td><code>[]</code></td>
+    <td>match a range of characters</td>
+ </tr> 
+ <tr> 
+    <td><code>man <var>command</var></code></td>
+    <td>read the online manual page for a command</td>
+  </tr>
+  <tr> 
+    <td><code>whatis <var>command</var></code></td>
+    <td>brief description of a command</td>
+  </tr>
+  <tr> 
+    <td><code>apropos <var>keyword </var> </code></td>
+    <td>match commands with keyword in their man pages</td>
+  </tr>
+  <tr>
+    <td><code> history</code></td>
+    <td>lists the recent history of the shell</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p class="navbar"><a href="unix3.html"><img src="media/left.gif" alt="Previous" width="37" height="39" border="0" /></a> 
+  <a href="index.html"><img src="media/home.gif" alt="Home" width="81" height="39" border="0" /></a> 
+</p>
+
+
+<p class="date">Last Modified: August 2015 </p>
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> LINUX Tutorial Two </title>
+<link href="unixtut1.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="Copyright" content="Michael Stonebank, 1995; Garrett Dancik, 2015" />
+</head>
+<body>
+<h1>LINUX Tutorial Two </h1>
+<h2>2.1 Copying Files</h2>
+<h3>cp (copy)</h3>
+<p> <samp>cp <var>file1 file2</var></samp> is the command which makes a copy of 
+  <strong>file1</strong> in the current working directory and calls it <strong>file2</strong> 
+</p>
+<p> What we are going to do now, is to take the file me.txt which you created previously,  
+    and use the <samp>cp</samp> command to copy it to your linuxstuff 
+  directory. </p>
+<p> First, <samp>cd</samp> to your linuxstuff directory.</p>
+<p class="command"> # cd /linuxstuff</p>
+<p> Then at the LINUX prompt, type, </p>
+<p class="command"> # cp /me.txt . </p>
+<p> (Note: Don't forget the dot (<samp>.</samp>) at the end. Remember, in LINUX 
+  the dot means the current directory.) </p>
+<p> The above command means copy the file <strong> me.txt</strong> to the 
+  current directory, keeping the name the same. </p>
+<h3>Exercise 2a</h3>
+<p>Create a backup of your <strong>me.txt</strong> file by copying it to a file called <strong>me.bak</strong> in the same directory. </p>
+<h2>2.2 Moving files</h2>
+<h3>mv (move)</h3>
+<p><samp>mv <var>file1 file2</var></samp> moves (or renames) <strong>file1</strong> 
+  to <strong>file2</strong> </p>
+<p> To move a file from one place to another, use the <samp>mv</samp> command. 
+  This has the effect of moving rather than copying the file, so you end up with 
+  only one file rather than two. </p>
+<p> It can also be used to rename a file, by moving the file to the same directory, 
+  but giving it a different name. </p>
+<p> We are now going to move the file <i>me.bak</i> to your backup directory. </p>
+<p>First, change directories to your linuxstuff directory if you are not already there. 
+  Then, inside the linuxstuff directory, type</p>
+<p class="command"> # mv me.bak backups/</p>
+<p> Type <samp>ls</samp> and <samp>ls backups</samp> to see if it has worked. 
+</p>
+<p> Suppose you want to rename the file me.txt to my_name.txt. This can be done by typing </p>
+<p class="command"> # mv me.txt my_name.txt</p>
+<p> Type <samp>ls</samp> to see if it has worked. 
+<h2>2.3 Removing files and directories </h2>
+<h3>rm (remove), rmdir (remove directory)</h3>
+<p>To delete (remove) a file, use the <samp>rm</samp> command. As an example, 
+  we are going to create a copy of the <strong>me.txt</strong> file then 
+  delete it. </p>
+<p> Inside your <strong>linuxstuff</strong> directory, type</p>
+<p class="command"> # cp me.txt tempfile.txt<br />
+  # ls (to check if it has created the file)<br />
+  # rm tempfile.txt<br />
+  # ls (to check if it has deleted the file) </p>
+<p> You can use the <samp>rmdir</samp> command to remove a directory (but only if 
+  it is empty first). Try to remove the <strong>backups</strong> directory. You 
+  will not be able to since LINUX will not let you remove a non-empty directory.</p>
+<h3>Exercise 2b</h3>
+<p>Create a directory called <strong>tempstuff</strong> using <samp>mkdir</samp> 
+  , then remove it using the <samp>rmdir</samp> command.</p>
+<h2>2.4 Displaying the contents of a file on the screen </h2>
+<h3>clear (clear screen)</h3>
+<p>Before you start the next section, you may like to clear the terminal window 
+  of the previous commands so the output of the following commands can be clearly 
+  understood. </p>
+<p> At the prompt, type </p>
+<p class="command"> # clear </p>
+<p> This will clear all text and leave you with the # prompt at the top of the 
+  window. </p>
+<h3>cat (concatenate)</h3>
+<p>The command <samp>cat</samp> can be used to display the contents of a file 
+  on the screen. Type: </p>
+<p class="command"> # cat me.txt </p>
+<p> But what if the file was longer than than the size of the window? In this case the contents of the file  
+  scrolls past making it unreadable. To see let's look at the yum.log file, which contains information about programs installed or removed using the program 'yum'. To see this type:</p>
+
+<p class="command"> # cat /var/log/yum.log </p>
+
+<h3>more</h3>
+<p>The command <samp>more</samp> writes the contents of a file onto the screen 
+  a page at a time. Type </p>
+<p class="command"> # more /var/log/yum.log</p>
+<p> Press the <samp>[space-bar]</samp> if you want to see another page, type <samp>q</samp> 
+  if you want to quit reading. As you can see, <samp>more</samp> is used in preference 
+  to <samp>cat</samp> for long files. </p>
+<h3>head</h3>
+<p>The <samp>head</samp> command writes the first ten lines of a file to the screen. 
+</p>
+<p> First clear the screen then type </p>
+<p class="command"> # head /var/log/yum.log</p>
+<p> The command <samp> head -n</samp> will write the first <i>n</i> lines of a file to the screen. For example, to write the first 20 lines of 
+the file /var/log/yum.log type </p>
+<p class="command"> # head -20 /var/log/yum.log</p>
+<h3>tail</h3>
+<p>The <samp>tail</samp> command writes the last ten lines of a file to the screen. 
+</p>
+<p> Clear the screen and type </p>
+<p class="command"> # tail /var/log/yum.log</p>
+<p> Like the <samp>head</samp> command, the <samp>-n</samp> option can also be specified. </p>
+<h2>2.5 Searching the contents of a file </h2>
+<!--
+<h3>Simple searching using less</h3>
+<p>Using <samp>less</samp>, you can search though a text file for a keyword (pattern). 
+  For example, to search through poems.txt for the word 'women', 
+  type </p>
+<p class="command"> # less poems.txt</p>
+<p> then, still in <samp>less</samp> (i.e. don't press <samp>q</samp> to quit), type a forward 
+  slash <samp>/</samp> followed by the word to search</p>
+<p class="command"> /women</p>
+<p> As you can see, <samp>less</samp> finds and highlights the keyword. Type <samp>n</samp> 
+  to search for the next occurrence of the word, and <samp>N</samp> to find the previous occurence of the word. </p>
+-->
+<h3>grep</h3>
+<p><samp>grep</samp> is one of many standard LINUX utilities. It searches files 
+  for specified words or patterns. First clear the screen, then type </p>
+<p class="command"> # grep firewall /var/log/yum.log</p>
+<p> As you can see, <samp>grep</samp> has printed out each line containing the word 
+<i>firewall</i>. </p>
+<p> Now try typing </p>
+<p class="command"> # grep Firewall /var/log/yum.log</p>
+<p> Note that the <samp>grep</samp> command is case sensitive; it distinguishes between 
+  firewall and Firewall. </p>
+<p> To ignore upper/lower case distinctions, use the -i option, i.e. type </p>
+<p class="command"> # grep -i firewall /var/log/yum.log</p>
+<p> To search for a phrase or pattern, you must enclose it in single quotes (the 
+  apostrophe symbol). For example to search for <i>Erased: firewall</i>, type </p>
+<p class="command"> # grep -i 'Erased: firewall' /var/log/yum.log</p>
+<p> Some of the other options of grep are: </p>
+<p> -v display those lines that do NOT match <br />
+  -n precede each maching line with the line number <br />
+  -c print only the total count of matched lines <br />
+</p>
+<p> Try some of them and see the different results. Don't forget, you can use 
+  more than one option at a time, for example, the number of lines with the 
+  word 'firewall' (ignoring case) is</p>
+<p class="command"> # grep -ic firewall /var/log/yum.log</p>
+<h3>Exercise 2c</h3>
+<p> What are the line numbers of the log file where the word <i>firewall</i> occurs? </p> 
+<h3>wc (word count)</h3>
+<p>A handy little utility is the <samp>wc</samp> command, short for word count. 
+  To do a word count on <strong>/var/log/yum.log</strong>, type </p>
+<p class="command"> # wc -w /var/log/yum.log</p>
+<p> To find out how many lines the file has, type </p>
+<p class="command"> # wc -l /var/log/yum.log</p>
+
+<h2>2.6 Editing the contents of a file </h2>
+<h3>vi</h3>
+<p>The text editor <samp>vi</samp> is an extremely powerful and popular terminal-based text editor. 
+The command <samp>vi file</samp> will open a file using the <samp>vi</samp> text editor. 
+If the file does not exist, then invoking <samp>vi</samp> can be used to create a new file. 
+  For example, type 
+  <p class="command"> # vi test.txt</p> <p>to create a file named test.txt for editing. Note that whenever you open a file, you will be in <i>command</i> mode (see below). </p> 
+  <p>
+Note that terminal text editors are much different than graphical ones, and will take some getting used to.
+The <i>vi</i> text editor has two modes:
+<p> <b>Insert</b> mode allows the user to insert (type) content into the file. To enter <i>insert</i> mode, type the letter 'i'. When in insert mode,
+    you will see the word <samp>INSERT</samp> on the bottom left corner of the screen. </li> When in this mode you can type normally
+to add content to the file, and use the arrow keys to move the cursor. </p>
+<p> <b>Command</b> mode allows the user to enter special commands for navigating and editing the file. When in <i>insert</i> mode, hit 
+    the ESCAPE key to switch to command mode. Command mode allows you to use various commands, some of which are provided below.</p>
+<p>
+<center>
+<table border="1" align="center" cellpadding="3" cellspacing="0">
+    <tr> <th>Category</th><th>Command</th><th>Description</th></tr>
+    <tr> 
+        
+        <td rowspan = "3"> Saving/Exiting </td>
+        <td> <samp>:w</samp></td> <td> saves (writes) the file. You can type <samp><var>:w name</samp></var> to save the file as <i>name</i>.</td></tr>
+    <tr> <td><samp>:q</samp> </td> <td> quits the text editor. Note: if changes have been made, you will need to use <samp><var>:q!</samp></var> to quit without saving</td></tr>
+    <tr> <td><samp>:wq</samp> </td><td>  save and quit </tr>
+        <tr>
+            <td rowspan = "7"> Movement </td>
+            <td><samp> w</samp></td> <td>move to the beginning of the next <i>word</i></td>
+            <tr><td><samp>e </samp></td><td>move to the <i>end</i> of the next word</td></tr>
+        <tr><td><samp>b</samp> </td><td>move <i>back</i> to the beginning of the current word</td></tr>
+        <tr><td><samp><var>:n</var></samp> </td><td>move to line number <i>n</i> of the file</td></tr>
+        <tr><td><samp>$</samp> </td><td>move to the end of the current line</td> </tr>
+        <tr><td><samp>0</samp> </td><td>move to the start of the current line</td> </tr>
+        <tr><td><samp>[Shift] g</samp> </td><td> move to the last line of the file</td></tr>
+        <tr> <td rowspan = "8">Editing </td>
+            <td><samp>x</samp></td> <td>delete the character under the cursor </td>
+        </tr>
+        <tr> <td><samp>dw</samp> </td><td> delete all characters from the cursor to the end of the word</td> </tr>
+        <tr> <td><samp>yy</samp> </td><td> copy the current line to the clipboard</td> </tr>
+        <tr> <td><samp>pp</samp> </td><td> paste the clipboard content </td></tr>
+        <tr> <td><samp>dd</samp> </td><td> delete the current line</td></tr>
+        <tr> <td><samp>r</samp></td><td> replace the character under the cursor with the next character typed</td></tr>
+        <tr> <td><samp>u</samp></td><td> undo the last change</td></tr>
+        <tr> <td><samp>[Ctrl] r</samp></td><td> redo the last change</td></tr>
+        <tr> <td rowspan = "2"> Find/Replace</td>
+            <td><samp><var>/string</var></samp> </td><td>  searches for 'string' in the file; type <i>n</i> to find the next matching string or <i>[Shift] n</i> to 
+                    find the previous match</td></tr>
+        <tr> <td><samp><var>:%s/string1/string2/g</var></samp> </td><td>  replaces all occurences of <i>string1</i> with <i>string2</i> </td></tr>
+</table></center></p>
+
+<p>Note that many of the 'movement' and 'editing' commands can be automatically repeated multiple times by preceeding the command with a number. For example, typing <samp>5dd</samp> 
+will delete the 5 lines beginning with the current one. Similarly, <samp>10x</samp> will delete the 10 characters beginning with the current one; typing 
+<samp>5</samp> and then the right arrow key will move the cursor 5 characters to the right. </p>
+
+<h3> Exercise 2d </h3>
+<p>First, type <samp> cd /</samp> to ensure that you are in the topmost directory. Using <i>vi</i>, create a file named <i>test.txt</i> that contains the following:</p>
+
+<p>This is a test.<br/>
+I am using vi in CSC 343.</p>
+<p>Save your changes, then edit the first line to say <i>This is an exercise</i>. Switch to command mode, go directly to the beginning of the
+second line. Then search for <i>vi</i>, move to this word, and add the words 'the text editor' before it. Skip a line, type your name, then copy and
+paste your name 10 times by switching to command mode, and typing <samp>yy</samp> on the line with your name, to copy it, and typing <samp>10pp</samp> to then paste your name 10 times. Save your file.
+</p>
+
+
+<h2>Summary </h2>
+<table border="1" align="center" cellpadding="3" cellspacing="0">
+  <tr> 
+    <td><code>cp <var>file1 file2</var></code></td>
+    <td>copy file1 and call it file2</td>
+  </tr>
+  <tr> 
+    <td><code>mv <var>file1 file2</var></code></td>
+    <td>move or rename file1 to file2</td>
+  </tr>
+  <tr> 
+    <td><code>rm <var>file</var></code></td>
+    <td>remove a file</td>
+  </tr>
+  <tr> 
+    <td><code>rmdir <var>directory</var></code></td>
+    <td>remove a directory</td>
+  </tr>
+  <tr> 
+    <td><code>cat <var>file</var></code></td>
+    <td>display a file</td>
+  </tr>
+  <tr> 
+    <td><code>more <var>file</var></code></td>
+    <td>display a file a page at a time</td>
+  </tr>
+  <tr> 
+    <td><code>head <var>file</var></code></td>
+    <td>display the first few lines of a file</td>
+  </tr>
+  <tr> 
+    <td><code>tail <var>file</var></code></td>
+    <td>display the last few lines of a file</td>
+  </tr>
+  <tr> 
+    <td><code>grep <var>'keyword' file</var></code></td>
+    <td>search a file for keywords</td>
+  </tr>
+  <tr> 
+    <td><code>wc <var>file</var></code></td>
+    <td>count number of lines/words/characters in file</td>
+  </tr>
+  <tr>
+    <td><code>vi <var>file</var></code</td>
+    <td>open a file in the vi text editor</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p class="navbar"><a href="unix1.html"><img src="media/left.gif" alt="Previous" width="37" height="39" border="0" /></a> 
+  <a href="index.html"><img src="media/home.gif" alt="Home" width="81" height="39" border="0" /></a><a href="linux3.html"><img src="media/right.gif" alt="Next" width="37" height="39" border="0" /></a> 
+</p>
+<p class="date">Last Modified: August 2015 </p>
+</body>
+</html>
