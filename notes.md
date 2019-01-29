@@ -11,7 +11,7 @@ exclude_from_nav: false
 * [Linux Tutorial]({{ site.baseurl }}/data/notes/linuxtut/)
 * Introduction to Hadoop (Available on [Blackboard](https://easternct.blackboard.com/))
 * Hadoop Architecture (Available on [Blackboard](https://easternct.blackboard.com/))
-* [HDFSe]({{ site.baseurl }}/data/notes/HDFS.pdf)
+* [HDFS]({{ site.baseurl }}/data/notes/HDFS.pdf)
 
 {% comment %}
 * [Cells and DNA]({{ site.baseurl }}/data/notes/Cells_and_DNA.pdf)
