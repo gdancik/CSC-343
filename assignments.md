@@ -10,6 +10,9 @@ Note: all Assignments are due at the beginning of class unless noted otherwise
 
 * [Docker Installation and Practice]({{ site.baseurl }}/data/hw/DockerSetup.pdf) (required for Lab #1)  
 * [Lab #1: Navigating Linux]({{ site.baseurl }}/data/hw/Linux.pdf) (Due: Wednesday, 1/30/2019) 
+* [Lab #2: Files in Docker and HDFS]({{ site.baseurl }}/data/hw/HDFS-hw.pdf) (Due: Monday, 2/4/2019)
+    * [logs.zip]({{ site.baseurl }}/data/hw/logs.zip)
+ 
 {% comment %}
 * Watch the You Tube videos covering genes, SNPs, and where your genes come from linked at the end of the <a href = "../notes/">Course Introduction</a> notes
 * [Lab #2 - DNA and complements]({{ site.baseurl }}/data/hw/Lab2_Complements.pdf) (Due: Wednesday, 2/7) 
