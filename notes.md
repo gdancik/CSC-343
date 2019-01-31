@@ -12,6 +12,7 @@ exclude_from_nav: false
 * Introduction to Hadoop (Available on [Blackboard](https://easternct.blackboard.com/))
 * Hadoop Architecture (Available on [Blackboard](https://easternct.blackboard.com/))
 * [HDFS]({{ site.baseurl }}/data/notes/HDFS.pdf)
+* [Python Basics]({{ site.baseurl }}/data/notes/PythonBasics.zip)
 
 {% comment %}
 * [Cells and DNA]({{ site.baseurl }}/data/notes/Cells_and_DNA.pdf)
