@@ -6,6 +6,8 @@
 
 # 1. For the string below, output the following, using slicing for (b)-(c)
 
+school = "Eastern Connecticut State University"
+
 #   (a) The entire string
 
 #   (b) The first 7 characters
@@ -14,15 +16,15 @@
 
 #   (d) The first 7 characters in reverse
 
-school = "Eastern Connecticut State University"
 
 
 # 2. (a) add "Big" and "Data" to the list of words below.
 
-#    (b) Use a loop to iterate through the each words. For each word, output
+words = ["Eastern", "Connecticut", "State", "University"]
+
+#    (b) Use a loop to iterate through each word. For each word, output
 #        the word and its length in the format word: length.
 
-words = ["Eastern", "Connecticut", "State", "University"]
 
 
 # 3. A few sentences from The Wonderful Wizard of Oz, by Frank L. Baum,
@@ -51,8 +53,5 @@ another corner."""
 #      order to do this, remove all commas from the text (otherwise "Em,"
 #      and "Em" will be listed as separate words). Note that each word 
 #      should only appear once in your final list.
-
-
-
 
 
