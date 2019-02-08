@@ -13,6 +13,8 @@ exclude_from_nav: false
 * Hadoop Architecture (Available on [Blackboard](https://easternct.blackboard.com/))
 * [HDFS]({{ site.baseurl }}/data/notes/HDFS.pdf)
 * [Python Basics]({{ site.baseurl }}/data/notes/PythonBasics.zip)
+* [MapReduce]({{ site.baseurl }}/data/notes/MapReduce.pdf)
+    * [Word Count Example]({{ site.baseurl }}/data/notes/wordcount.zip)
 
 {% comment %}
 * [Cells and DNA]({{ site.baseurl }}/data/notes/Cells_and_DNA.pdf)
