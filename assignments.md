@@ -13,7 +13,8 @@ Note: all Assignments are due at the beginning of class unless noted otherwise
 * [Lab #2: Files in Docker and HDFS]({{ site.baseurl }}/data/hw/HDFS-hw.pdf) (Due: <strike>Monday, 2/4/2019</strike><span style = "color:red"> Wednesday, 2/6/19</span>)
     * [logs.zip]({{ site.baseurl }}/data/hw/logs.zip)
 * [Lab #3: Python]({{ site.baseurl }}/data/hw/lab3-python.py) (Due: Monday, 2/11/19)
- 
+* [Lab #4: MapReduce]({{ site.baseurl }}/data/hw/MapReduce-hw.pdf) (Due: Wednesday, 2/19/19)
+    * [customers.zip]({{ site.baseurl }}/data/hw/customers.zip)
 {% comment %}
 * Watch the You Tube videos covering genes, SNPs, and where your genes come from linked at the end of the <a href = "../notes/">Course Introduction</a> notes
 * [Lab #2 - DNA and complements]({{ site.baseurl }}/data/hw/Lab2_Complements.pdf) (Due: Wednesday, 2/7) 
