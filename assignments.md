@@ -13,6 +13,7 @@ Note: all Assignments are due at the beginning of class unless noted otherwise
 * [Lab #2: Files in Docker and HDFS]({{ site.baseurl }}/data/hw/HDFS-hw.pdf) (Due: <strike>Monday, 2/4/2019</strike><span style = "color:red"> Wednesday, 2/6/19</span>)
     * [logs.zip]({{ site.baseurl }}/data/hw/logs.zip)
 * [Lab #3: Python]({{ site.baseurl }}/data/hw/lab3-python.py) (Due: Monday, 2/11/19)
+<hr>
 * [Lab #4: MapReduce]({{ site.baseurl }}/data/hw/MapReduce-hw.pdf) (Due: Wednesday, 2/19/19)
     * [customers.zip]({{ site.baseurl }}/data/hw/customers.zip)
 {% comment %}
@@ -32,7 +33,6 @@ Note: all Assignments are due at the beginning of class unless noted otherwise
     * [sequences.txt]({{ site.baseurl }}/data/hw/sequences.txt) 
 * Lab #11 - GEO ([Assignment]({{ site.baseurl }}/data/hw/GEO.docx) |
 [Preview]({{ site.baseurl }}/data/hw/GEO-preview.docx)) (Due: Wednesday, 4/11)
-<hr>
 * [Lab #12 - HMM]({{ site.baseurl }}/data/hw/HMM_lab.pdf) (Due: Wednesday, 5/02)
 * Final Project ([Assignment]({{ site.baseurl }}/data/hw/FinalProject.pdf) | 
 [Rubric]({{ site.baseurl }}/data/hw/FinalProjectRubric.pdf))
