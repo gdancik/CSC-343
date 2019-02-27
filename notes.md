@@ -15,7 +15,7 @@ exclude_from_nav: false
 * [Python Basics]({{ site.baseurl }}/data/notes/PythonBasics.zip)
 * [MapReduce]({{ site.baseurl }}/data/notes/MapReduce.pdf)
     * [Word Count Example]({{ site.baseurl }}/data/notes/wordcount.zip)
-
+* [Relational Databases]({{ site.baseurl }}/data/notes/DB.pdf)
 {% comment %}
 * [Cells and DNA]({{ site.baseurl }}/data/notes/Cells_and_DNA.pdf)
 * [Python Programming Basics]({{ site.baseurl }}/data/notes/PythonBasics.zip)
