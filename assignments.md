@@ -18,7 +18,6 @@ Note: all Assignments are due at the beginning of class unless noted otherwise
 <hr>
 * [Lab #5: MySQL]({{ site.baseurl }}/data/hw/MySQL.pdf) (Due: Wednesday, 3/06/19)
 
-
 {% comment %}
 * Watch the You Tube videos covering genes, SNPs, and where your genes come from linked at the end of the <a href = "../notes/">Course Introduction</a> notes
 * [Lab #2 - DNA and complements]({{ site.baseurl }}/data/hw/Lab2_Complements.pdf) (Due: Wednesday, 2/7) 
