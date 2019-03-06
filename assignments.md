@@ -17,6 +17,8 @@ Note: all Assignments are due at the beginning of class unless noted otherwise
     * [customers.zip]({{ site.baseurl }}/data/hw/customers.zip)
 <hr>
 * [Lab #5: MySQL]({{ site.baseurl }}/data/hw/MySQL.pdf) (Due: Wednesday, 3/06/19)
+* [Lab #6: Sqoop, Impala, and Hive]({{ site.baseurl }}/data/hw/sqoop.pdf) (Due: Wednesday, 3/20/19)
+    * [more_salaries.txt]({{ site.baseurl }}/data/hw/more_salaries.txt)
 
 {% comment %}
 * Watch the You Tube videos covering genes, SNPs, and where your genes come from linked at the end of the <a href = "../notes/">Course Introduction</a> notes
