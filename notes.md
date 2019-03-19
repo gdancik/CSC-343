@@ -18,6 +18,7 @@ exclude_from_nav: false
 * [Relational Databases]({{ site.baseurl }}/data/notes/DB.pdf)
 * Sqoop (Available on [Blackboard](https://easternct.blackboard.com/))
 * Intro to Impala and Hive (Available on [Blackboard](https://easternct.blackboard.com/))
+* Modeling Data with Impala and Hive (Available on [Blackboard](https://easternct.blackboard.com/))
 {% comment %}
 * [Cells and DNA]({{ site.baseurl }}/data/notes/Cells_and_DNA.pdf)
 * [Python Programming Basics]({{ site.baseurl }}/data/notes/PythonBasics.zip)
