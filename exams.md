@@ -8,6 +8,6 @@ order: 4
 ---
 
 * [Exam I Review]({{ site.baseurl }}/data/exams/ExamIReview.pdf)
+* [Exam II Review]({{ site.baseurl }}/data/exams/ExamIIReview.pdf)
 {% comment %}
-* [Exam II Practice]({{ site.baseurl }}/data/exams/ExamIIPractice.pdf)
 {% endcomment %}
