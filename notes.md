@@ -19,6 +19,8 @@ exclude_from_nav: false
 * Sqoop (Available on [Blackboard](https://easternct.blackboard.com/))
 * Intro to Impala and Hive (Available on [Blackboard](https://easternct.blackboard.com/))
 * Modeling Data with Impala and Hive (Available on [Blackboard](https://easternct.blackboard.com/))
+* Introduction to Spark (Available on [Blackboard](https://easternct.blackboard.com/))
+    * [Functional Programming in Python]({{ site.baseurl }}/data/notes/FunctionalProgramming.py)
 {% comment %}
 * [Cells and DNA]({{ site.baseurl }}/data/notes/Cells_and_DNA.pdf)
 * [Python Programming Basics]({{ site.baseurl }}/data/notes/PythonBasics.zip)
