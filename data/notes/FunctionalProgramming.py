@@ -7,7 +7,7 @@
 # Here we cover some basic functional programming concepts
 ##################################################################
 
-# example function which squares a number
+# example function which returns the square of the number 'x'
 def square(x) :
     return x*x
 
@@ -17,10 +17,9 @@ square(3)
 # The lambda function syntax is based on 'lambda calculus', 
 # \lambda inputs.expression, e.g. \lambda x.x*x, which has the
 # basic structure of input --> output
-# In python, the syntax is
-# lambda input : expression
+# In python, the syntax is lambda input : expression
 # and the statement cannot span multiple lines.
-# The main motivation is that lambda functions can be anonymous, 
+# The main reason is that lambda functions can be anonymous, 
 # as described in a later example
 ##################################################################
 
@@ -35,9 +34,9 @@ add2(3,4)
 
 ##################################################################
 # The map function has the format map(func, iter) and applies 
-# the function 'func' to each element of the iterator 'iter', 
-# and returns a new iterator with each element replaced by 
-# func(elememnt)
+# the function 'func' to each element of the iterator 'iter'. 
+# Map returns a new iterator with each element replaced by 
+# func(element)
 
 # Note: you can think of an iterator as a pointer to a collection 
 # of elements; the iterator can only move forward through the
@@ -64,6 +63,7 @@ list(m)
 # func(element) is True.
 #####################################################################
 
+# keep only those numbers >= 5
 f = filter(lambda x : x >= 5, l)
 list(f)
 
@@ -81,7 +81,7 @@ list(m)
 
 
 ############################################################################
-# Since the output of 'filter' is input to 'map', we can use a single 
+# Since the output of 'filter' is the input to 'map', we can use a single 
 # statement
 ############################################################################
 m = map(lambda x : x*x, filter(lambda x: x >= 5, l))
@@ -89,10 +89,10 @@ list(m)
 
 
 #####################################################################
-# The reduce function applies a rolling computation to a sequential
+# The reduce function applies a rolling computation to sequential
 # pairs of values in a collection, and returns the reduced value.
-# The reduce function has teh format reduce(func, iter, initial), 
-# where initial is an optional value pre-pended to the iterator
+# The reduce function has the format reduce(func, iter, initial). 
+# Initial is an optional value that is pre-pended to the iterator
 #####################################################################
 
 # required for 'reduce'
@@ -113,4 +113,3 @@ def addAndOutput(x,y) :
 
 print("list is:", l)
 r = reduce(addAndOutput, l)
-
