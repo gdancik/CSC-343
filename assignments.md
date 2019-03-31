@@ -18,9 +18,13 @@ Note: all Assignments are due at the beginning of class unless noted otherwise
 * [Lab #5: MySQL]({{ site.baseurl }}/data/hw/MySQL.pdf) (Due: Wednesday, 3/06/19)
 * [Lab #6: Sqoop, Impala, and Hive]({{ site.baseurl }}/data/hw/sqoop.pdf) (Due: Wednesday, 3/20/19)
     * [more_salaries.txt]({{ site.baseurl }}/data/hw/more_salaries.txt)
-<hr>
 * [Lab #7: Data Modeling]({{ site.baseurl }}/data/hw/modeling.pdf) (Due: Monday, 3/25/19)
     * [la_parking_citations.zip]({{ site.baseurl }}/data/hw/la_parking_citations.zip)
+<hr>
+* [Lab #8: Functional Programming]({{ site.baseurl }}/data/hw/lab8.py) (Due: Monday, 4/8/19)
+* [Lab #9: PySpark]({{ site.baseurl }}/data/hw/Lab9.py) (Due: Wednesday, 4/10/19)
+    * [streams.txt]({{ site.baseurl }}/data/hw/streams.txt)
+    * [example tweet]({{ site.baseurl }}/data/hw/tweet.json)
 
 {% comment %}
 * Watch the You Tube videos covering genes, SNPs, and where your genes come from linked at the end of the <a href = "../notes/">Course Introduction</a> notes
