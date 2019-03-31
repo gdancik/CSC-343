@@ -45,14 +45,14 @@ strings = ['big data programming','tacos', 'web development', 'kfc']
 
 courses = ['CSC-450', 'MAT-243', 'CSC-343', 'ART-100']
 
-# 8. Use appropriate map and filter functions to extract the city for
+# 7. Use appropriate map and filter functions to extract the city for
 #    all cities in Connecticut from the records below. Assume all 
 #    records have the format 'city, state', and that CT could appear
 #    anywhere in the record.
 
 records = ['Hartford, CT', 'Willimantic, CT', 'Pheonix, AZ', 'Boise, ID']
 
-# 9. This semester, I am teaching the following courses
+# 8. This semester, I am teaching the following courses
 #    CSC 343-01, 11-11:50
 #    CSC 314-01, 1-1:50
 #    CSC 314-02, 2-2:50
@@ -63,7 +63,7 @@ records = ['Hartford, CT', 'Willimantic, CT', 'Pheonix, AZ', 'Boise, ID']
 # CSC 343-01.    
 
 
-# 10. Information about the book 'Eloquent Javascript, Second Edition' is
+# 9. Information about the book 'Eloquent Javascript, Second Edition' is
 #     stored in the JSON formatted string below. Convert the JSON to a
 #     dictionary and output the title of the book and the author.
 
@@ -87,7 +87,7 @@ import json
 res = requests.get('https://en.wikipedia.org/api/rest_v1/page/summary/Big_data')
 wiki = json.loads(res.content.decode())
 
-# 11. Print out the page summary, which is stored under 'extract'
+# 10. Print out the page summary, which is stored under 'extract'
 
 
 # 11. Print out the source URL of the original image
