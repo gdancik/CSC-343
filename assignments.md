@@ -22,7 +22,7 @@ Note: all Assignments are due at the beginning of class unless noted otherwise
     * [la_parking_citations.zip]({{ site.baseurl }}/data/hw/la_parking_citations.zip)
 <hr>
 * [Lab #8: Functional Programming]({{ site.baseurl }}/data/hw/lab8.py) (Due: Monday, 4/8/19)
-* [Lab #9: PySpark]({{ site.baseurl }}/data/hw/Lab9.py) (Due: Wednesday, 4/10/19)
+* [Lab #9: PySpark]({{ site.baseurl }}/data/hw/lab9.py) (Due: Wednesday, 4/10/19)
     * [stream.txt]({{ site.baseurl }}/data/hw/streams.txt)
     * [example tweet]({{ site.baseurl }}/data/hw/tweet.json)
 
