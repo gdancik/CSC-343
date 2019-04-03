@@ -23,6 +23,10 @@ exclude_from_nav: false
     * [Functional Programming in Python]({{ site.baseurl }}/data/notes/FunctionalProgramming.py)
 * RDDs in Spark (Available on [Blackboard](https://easternct.blackboard.com/))
     * [Dictionaries and JSON in Python]({{ site.baseurl }}/data/notes/DictionariesAndJSON.py)
+* Working with RDDs in Spark (Available on [Blackboard](https://easternct.blackboard.com/))
+* Aggregating Data with Pair RDDs (Available on [Blackboard](https://easternct.blackboard.com/))
+   * [Word Count Example, PySpark Style]({{ site.baseurl }}/data/notes/wordcount_pyspark.py)
+
 {% comment %}
 * [Cells and DNA]({{ site.baseurl }}/data/notes/Cells_and_DNA.pdf)
 * [Python Programming Basics]({{ site.baseurl }}/data/notes/PythonBasics.zip)
