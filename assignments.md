@@ -20,11 +20,12 @@ Note: all Assignments are due at the beginning of class unless noted otherwise
     * [more_salaries.txt]({{ site.baseurl }}/data/hw/more_salaries.txt)
 * [Lab #7: Data Modeling]({{ site.baseurl }}/data/hw/modeling.pdf) (Due: Monday, 3/25/19)
     * [la_parking_citations.zip]({{ site.baseurl }}/data/hw/la_parking_citations.zip)
-<hr>
 * [Lab #8: Functional Programming]({{ site.baseurl }}/data/hw/lab8.py) (Due: Monday, 4/8/19)
 * [Lab #9: PySpark]({{ site.baseurl }}/data/hw/lab9.py) (Due: Wednesday, 4/10/19)
     * [stream.txt]({{ site.baseurl }}/data/hw/stream.txt)
     * [example tweet]({{ site.baseurl }}/data/hw/tweet.json)
+<hr>
+* [Lab #10: Paired RDDs]({{ site.baseurl }}/data/hw/lab10.py) (Due: Wednesday, 4/17/19)
 
 {% comment %}
 * Watch the You Tube videos covering genes, SNPs, and where your genes come from linked at the end of the <a href = "../notes/">Course Introduction</a> notes
