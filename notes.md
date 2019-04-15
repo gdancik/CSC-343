@@ -27,6 +27,7 @@ exclude_from_nav: false
 * Aggregating Data with Pair RDDs (Available on [Blackboard](https://easternct.blackboard.com/))
    * [Word Count Example, PySpark Style]({{ site.baseurl }}/data/notes/wordcount_pyspark.py)
 * Spark Parallel Processing (Available on [Blackboard](https://easternct.blackboard.com/))
+   * [Partitions]({{ site.baseurl }}/data/notes/partitions.py)
 
 {% comment %}
 * [Cells and DNA]({{ site.baseurl }}/data/notes/Cells_and_DNA.pdf)
