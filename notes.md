@@ -28,7 +28,7 @@ exclude_from_nav: false
    * [Word Count Example, PySpark Style]({{ site.baseurl }}/data/notes/wordcount_pyspark.py)
 * Spark Parallel Processing (Available on [Blackboard](https://easternct.blackboard.com/))
    * [Partitions]({{ site.baseurl }}/data/notes/partitions.py)
-
+* Spark RDD Persistence (Available on [Blackboard](https://easternct.blackboard.com/))
 {% comment %}
 * [Cells and DNA]({{ site.baseurl }}/data/notes/Cells_and_DNA.pdf)
 * [Python Programming Basics]({{ site.baseurl }}/data/notes/PythonBasics.zip)
