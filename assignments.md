@@ -25,7 +25,7 @@ Note: all Assignments are due at the beginning of class unless noted otherwise
     * [stream.txt]({{ site.baseurl }}/data/hw/stream.txt)
     * [example tweet]({{ site.baseurl }}/data/hw/tweet.json)
 <hr>
-* [Lab #10: Paired RDDs]({{ site.baseurl }}/data/hw/lab10.py) (Due: Wednesday, 4/17/19)
+* [Lab #10: Pair RDDs]({{ site.baseurl }}/data/hw/lab10.py) (Due: Wednesday, 4/17/19)
 
 {% comment %}
 * Watch the You Tube videos covering genes, SNPs, and where your genes come from linked at the end of the <a href = "../notes/">Course Introduction</a> notes
