@@ -29,7 +29,7 @@ exclude_from_nav: false
 * Spark Parallel Processing (Available on [Blackboard](https://easternct.blackboard.com/))
    * [Partitions]({{ site.baseurl }}/data/notes/partitions.py)
 * Spark RDD Persistence (Available on [Blackboard](https://easternct.blackboard.com/))
-   * [Persistence Example]({{ site.baseurl }}/data/notes/persistence.py)
+   * [Persistence Example]({{ site.baseurl }}/data/notes/persist.py)
     
 {% comment %}
 * [Cells and DNA]({{ site.baseurl }}/data/notes/Cells_and_DNA.pdf)
