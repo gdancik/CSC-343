@@ -30,6 +30,9 @@ exclude_from_nav: false
    * [Partitions]({{ site.baseurl }}/data/notes/partitions.py)
 * Spark RDD Persistence (Available on [Blackboard](https://easternct.blackboard.com/))
    * [Persistence Example]({{ site.baseurl }}/data/notes/persist.py)
+* Spark Algorithms (Available on [Blackboard](https://easternct.blackboard.com/))
+   * [Page Rank]({{ site.baseurl }}/data/notes/pagerank.py)
+   * [K-Means]({{ site.baseurl }}/data/notes/kmeans.py)
     
 {% comment %}
 * [Cells and DNA]({{ site.baseurl }}/data/notes/Cells_and_DNA.pdf)
