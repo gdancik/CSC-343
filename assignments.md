@@ -24,8 +24,10 @@ Note: all Assignments are due at the beginning of class unless noted otherwise
 * [Lab #9: PySpark]({{ site.baseurl }}/data/hw/lab9.py) (Due: Wednesday, 4/10/19)
     * [stream.txt]({{ site.baseurl }}/data/hw/stream.txt)
     * [example tweet]({{ site.baseurl }}/data/hw/tweet.json)
-<hr>
 * [Lab #10: Pair RDDs]({{ site.baseurl }}/data/hw/lab10.py) (Due: Wednesday, 4/17/19)
+<hr>
+* Final Project ([Assignment]({{ site.baseurl }}/data/hw/FinalProject.pdf) | 
+[Rubric]({{ site.baseurl }}/data/hw/FinalProjectRubric.pdf)) (Due: Friday, 5/17/19 by 1:00 PM, submit through [Blackboard](http://easternct.blackboard.com))
 
 {% comment %}
 * Watch the You Tube videos covering genes, SNPs, and where your genes come from linked at the end of the <a href = "../notes/">Course Introduction</a> notes
