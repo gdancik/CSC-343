@@ -25,6 +25,7 @@ Note: all Assignments are due at the beginning of class unless noted otherwise
     * [stream.txt]({{ site.baseurl }}/data/hw/stream.txt)
     * [example tweet]({{ site.baseurl }}/data/hw/tweet.json)
 * [Lab #10: Pair RDDs]({{ site.baseurl }}/data/hw/lab10.py) (Due: Wednesday, 4/17/19)
+* [Lab #11: SparkSQL]({{ site.baseurl }}/data/data/SparkSQL.py) (Due: Monday, 5/6/19)
 <hr>
 * Final Project ([Assignment]({{ site.baseurl }}/data/hw/FinalProject.pdf) | 
 [Rubric]({{ site.baseurl }}/data/hw/FinalProjectRubric.pdf)) (Due: Friday, 5/17/19 by 1:00 PM, submit through [Blackboard](http://easternct.blackboard.com))
