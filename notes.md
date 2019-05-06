@@ -34,6 +34,6 @@ exclude_from_nav: false
    * [Page Rank]({{ site.baseurl }}/data/notes/pagerank.py)
    * [K-Means]({{ site.baseurl }}/data/notes/kmeans.py)
 * [SparkSQL Example]({{ site.baseurl }}/data/notes/SparkSQL.py)
-{% comment %}
 * [Wrap Up]({{ site.baseurl }}/data/notes/WrapUp.pdf)
+{% comment %}
 {% endcomment %}
