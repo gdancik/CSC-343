@@ -9,7 +9,7 @@ exclude_from_nav: false
 Note: all Assignments are due at the beginning of class unless noted otherwise
 
 * [Docker Installation and Practice]({{ site.baseurl }}/data/hw/DockerSetup.pdf) (required for Lab #1)  
-* [Lab #1: Navigating Linux]({{ site.baseurl }}/data/hw/Linux.pdf) (Due: Wednesday, 1/30/2019) 
+* [Lab #1: Navigating Linux]({{ site.baseurl }}/data/hw/Linux.pdf) (Due: Wednesday, 1/30/2019)
 * [Lab #2: Files in Docker and HDFS]({{ site.baseurl }}/data/hw/HDFS-hw.pdf) (Due: <strike>Monday, 2/4/2019</strike><span style = "color:red"> Wednesday, 2/6/19</span>)
     * [logs.zip]({{ site.baseurl }}/data/hw/logs.zip)
 * [Lab #3: Python]({{ site.baseurl }}/data/hw/lab3-python.py) (Due: Monday, 2/11/19)

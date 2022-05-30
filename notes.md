@@ -9,6 +9,7 @@ exclude_from_nav: false
 * [Course Introduction (with Docker examples)]({{ site.baseurl }}/data/notes/Intro.pdf)
     * [Docker Summary]({{ site.baseurl }}/data/notes/DockerSummary.pdf)
 * [Linux Tutorial]({{ site.baseurl }}/data/notes/linuxtut/)
+    * [Corrections / Notes ]({{ site.baseurl }}/data/hw/linux_corrections.html) 
 * Introduction to Hadoop (Available on [Blackboard](https://easternct.blackboard.com/))
 * Hadoop Architecture (Available on [Blackboard](https://easternct.blackboard.com/))
 * [HDFS]({{ site.baseurl }}/data/notes/HDFS.pdf)
