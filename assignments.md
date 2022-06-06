@@ -14,6 +14,7 @@ Note: all Assignments are due at the beginning of class unless noted otherwise
     * [logs.zip]({{ site.baseurl }}/data/hw/logs.zip)
 * [Lab #3: Python]({{ site.baseurl }}/data/hw/lab3-python.py) (Due: Monday, 2/11/19)
 * [Lab #4: MapReduce]({{ site.baseurl }}/data/hw/MapReduce-hw.pdf) (Due: Wednesday, 2/20/19)
+    * [lab4_help.py]({{ site.baseurl }}/data/hw/lab4_help.py)
     * [customers.zip]({{ site.baseurl }}/data/hw/customers.zip)
 * [Lab #5: MySQL]({{ site.baseurl }}/data/hw/MySQL.pdf) (Due: Wednesday, 3/06/19)
 * [Lab #6: Sqoop, Impala, and Hive]({{ site.baseurl }}/data/hw/sqoop.pdf) (Due: Wednesday, 3/20/19)
