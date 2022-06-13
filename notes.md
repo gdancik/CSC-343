@@ -16,6 +16,7 @@ exclude_from_nav: false
 * [Python Basics]({{ site.baseurl }}/data/notes/PythonBasics.zip)
 * [MapReduce]({{ site.baseurl }}/data/notes/MapReduce.pdf)
     * [Word Count Example]({{ site.baseurl }}/data/notes/wordcount.zip)
+    * [MapReduce Worksheet]({{ site.baseurl }}/data/notes/MapReduceWorksheet.docx)
 * [Relational Databases]({{ site.baseurl }}/data/notes/DB.pdf)
 * Sqoop (Available on [Blackboard](https://easternct.blackboard.com/))
 * Intro to Impala and Hive (Available on [Blackboard](https://easternct.blackboard.com/))
